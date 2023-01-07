@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf="servis.OturumKontrol()">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PanelX</a>
+    <button class="navbar-toggler" type="button" data-coreui-toggle="collapse" data-coreui-target="#navbarColor02"
+      aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/anasayfa']">Anasayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/haberler']">Haberler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/kategoriler']">Kategoriler</a>
+        </li>
+      </ul>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-light me-2" [routerLink]="['/giris']">Giriş yap veya kayıt ol</button>
+        <button type="button" class="btn btn-danger" (click)="servis.OturumKapat()" *ngIf="servis.OturumKontrol()">Çıkış
+          Yap</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<header class="blog-header lh-1 py-3" *ngIf="!servis.OturumKontrol()">
+  <div class="container">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-10 pt-1">
+        <a class="blog-header-logo text-dark" href="#">BERKAY HABER AJANSI</a>
+
+      </div>
+      <div class="col-2 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-warning" href="#" [routerLink]="['/giris']">Giriş Yap</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<router-outlet>
+
+  <!-- <app-home *ngIf="servis.OturumKontrol()"></app-home> -->
+</router-outlet>

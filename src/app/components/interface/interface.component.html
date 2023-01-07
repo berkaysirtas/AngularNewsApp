@@ -1,0 +1,37 @@
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" style="background-image: url('https://www.fsca.co.za/Page%20Slides/News-Banners.jpg');">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic fw-bold">Berkay Haber Ajansı</h1>
+            <p class="lead my-3 fw-bold">Dogru Haberin Adresi</p>
+        </div>
+    </div>
+    <div class="row g-5">
+        <div class="col-md-8">
+            <div *ngFor="let haber of haberler">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">{{haber.haberadi}}</h3>
+
+                        <a [routerLink]="['/haberDetay',haber.id]" class="stretched-link">detay</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="img-fluid w-100 rounded-3" src={{haber.resim}} />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <select class="form-control mb-3" [(ngModel)]="categoryId" (ngModelChange)="CategorySec($event)">
+                    <option [value]="" selected>Tüm Kategoriler</option>
+                    <option [value]="kat.id" *ngFor="let kat of kategoriler">{{kat.kategoriadi}}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</main>

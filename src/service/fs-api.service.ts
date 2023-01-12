@@ -2,6 +2,7 @@ import { Haberler } from '../models/Haberler';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Category } from 'src/models/Category';
+import { Kullanicilar } from 'src/models/Kullanicilar';
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,24 @@ export class FsApiService {
     return this.afs.collection("haberler", q => q.where("id", "==", haberId)).snapshotChanges();
   }
 
+
+    //#kullanici Odev
+    KullaniciGetir() {
+      return this.afs.collection("kullanicilar").snapshotChanges();
+    }
+    // KullaniciByIdGetir(id: string) {
+    //   return this.afs.collection("kullanicilar", q => q.where("dersId", "==", id)).snapshotChanges();
+    // }
+    KullaniciEkle(Kullanici: Kullanicilar) {
+      delete Kullanici.id
+      return this.afs.collection("kullanicilar").add(Kullanici);
+    }
+    KullaniciDuzenle(Kullanici: Kullanicilar) {
+      return this.afs.collection("kullanicilar").doc(Kullanici.id).update(Kullanici);
+    }
+    KullaniciSil(id: string) {
+      return this.afs.collection("kullanicilar").doc(id).delete();
+    }
 
 
 }

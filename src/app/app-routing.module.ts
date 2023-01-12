@@ -7,6 +7,7 @@ import { HaberlerComponent } from './components/Haberler/haberler.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from 'src/service/auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { KullanicilarComponent } from './components/kullanicilar/kullanicilar.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: "interface",
     component: InterfaceComponent,
+  },
+  {
+    path: "kullanicilar",
+    component: KullanicilarComponent,
   },
 ];
 

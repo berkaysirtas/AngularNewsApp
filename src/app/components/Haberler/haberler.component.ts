@@ -77,7 +77,6 @@ export class HaberlerComponent implements OnInit {
   }
   Sil(haber: Haberler, el: HTMLElement) {
     this.secHaber = haber;
-    this.modalBaslik = "Ders Sil";
     this.modal = new bootstrap.Modal(el);
     this.modal.show();
   }

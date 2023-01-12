@@ -1,3 +1,12 @@
+![kullanıcılar](https://user-images.githubusercontent.com/110261956/212148058-0b81dba6-37a1-43b9-9404-d1c6f64f0a3f.png)
+![anasayfa](https://user-images.githubusercontent.com/110261956/212148004-f0c324b3-5c57-4940-bdb8-026b3e3753a2.png)
+![haberler](https://user-images.githubusercontent.com/110261956/212148031-1201639c-0e4d-4a89-a359-fd7733c52b01.png)
+![kategoriler](https://user-images.githubusercontent.com/110261956/212148048-09591418-a412-432f-87a8-9cf32725d1cc.png)
+![1](https://user-images.githubusercontent.com/110261956/212148065-59066d19-4538-4b5d-afc7-c4baa092af04.png)![kullanicilar](https://user-images.githubusercontent.com/110261956/212148089-4fc50f11-925a-4e38-be5c-5949d3ac8084.png)
+
+![haberler](https://user-images.githubusercontent.com/110261956/212148073-82be2fce-b449-4677-929d-a2dbb28ca68e.png)
+![kategoriler](https://user-images.githubusercontent.com/110261956/212148086-11390d90-631a-48ca-8ca3-26ebefc323bf.png)
+
 # Firestore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
